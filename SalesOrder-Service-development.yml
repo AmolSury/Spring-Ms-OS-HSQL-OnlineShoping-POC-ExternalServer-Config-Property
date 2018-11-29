@@ -4,7 +4,7 @@ db:
   name: salesorderdb
 spring:
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: INPUHJPC04133:9092
     consumer:
       group-id: myGroup
   mail:
@@ -13,7 +13,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://INPUHJPC04133:8761/eureka/
      
 ui:
   serverUrl: http://localhost:4200/ 
