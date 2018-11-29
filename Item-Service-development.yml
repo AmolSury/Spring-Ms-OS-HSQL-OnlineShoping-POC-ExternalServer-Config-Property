@@ -1,0 +1,16 @@
+server:
+  port: 5052
+db:
+  name: itemdb
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      
+ui:
+  serverUrl: http://localhost:4200/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
