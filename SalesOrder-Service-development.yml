@@ -11,7 +11,7 @@ spring:
     host: localhost
     port: 25
   jmx:
-    default-domain: Item-Service
+    default-domain: SalesOrder-Service
 eureka:
   client:
     serviceUrl:

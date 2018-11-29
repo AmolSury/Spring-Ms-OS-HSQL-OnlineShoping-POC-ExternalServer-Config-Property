@@ -16,4 +16,4 @@ management:
         include: '*'
 spring:
   jmx:
-    default-domain: Item-Service
+    default-domain: Customer-Service
