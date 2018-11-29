@@ -1,0 +1,5 @@
+server:
+  port: 8761
+
+ui:
+  serverUrl: http://localhost:4200/

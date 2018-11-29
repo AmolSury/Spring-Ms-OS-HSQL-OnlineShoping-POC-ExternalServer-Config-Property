@@ -1,0 +1,38 @@
+server:
+  port: 5555
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+ui:
+  serverUrl: http://localhost:4200/
+zuul:
+  prefix: 
+  routes:
+    customersApi:
+      serviceId: CUSTOMER-SERVICE
+    itemsApi:
+      serviceId: ITEM-SERVICE
+    salesApi:
+      serviceId: SALESORDER-SERVICE
+# Increase the Hystrix timeout to 60s (for all)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+        timeout:
+          enable: false
+# Disable Hystrix timeout globally (for all services)
+#hystrix.command.default.execution.timeout.enabled: false
+
+# Disable Hystrix timeout for a single service
+#hystrix.command.<serviceName>.execution.timeout.enabled: false
+
+# Increase the Hystrix timeout to 60s (globally)
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+
+# Increase the Hystrix timeout to 60s (per service)
+#hystrix.command.<serviceName>.execution.isolation.thread.timeoutInMilliseconds: 60000
