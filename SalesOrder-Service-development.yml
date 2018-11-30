@@ -1,5 +1,3 @@
-server:
-  port: 5053
 db:
   name: salesorderdb
 spring:
