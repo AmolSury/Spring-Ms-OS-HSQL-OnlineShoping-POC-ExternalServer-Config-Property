@@ -13,13 +13,10 @@ zuul:
   routes:
     prefix: 
     customersApi:
-      path: /customersApi/**
       serviceId: CUSTOMER-SERVICE
     itemsApi:
-      path: /itemsApi/**
       serviceId: ITEM-SERVICE
     salesApi:
-      path: /salesApi/**
       serviceId: SALESORDER-SERVICE
 customersApi:
   ribbon:
