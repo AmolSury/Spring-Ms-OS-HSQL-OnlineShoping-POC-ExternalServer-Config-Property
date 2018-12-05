@@ -17,9 +17,14 @@ zuul:
     salesApi:
       path: /salesApi/**
       serviceId: SALESORDER-SERVICE
-ribbon:
-  connectTimeout: 3000
-  readTimeout: 60000
+customersApi:
+  ribbon:
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: http://inpuhjpc04128:9090,http://inpuhjpc04133:8080
+    ConnectTimeout: 10000
+    ReadTimeout: 30000
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100
 # Increase the Hystrix timeout to 60s (for all)
 hystrix:
   command:
