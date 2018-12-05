@@ -8,6 +8,7 @@ ui:
   serverUrl: http://localhost:4200/
 zuul:
   routes:
+    prefix: 
     customersApi:
       path: /customersApi/**
       serviceId: CUSTOMER-SERVICE
