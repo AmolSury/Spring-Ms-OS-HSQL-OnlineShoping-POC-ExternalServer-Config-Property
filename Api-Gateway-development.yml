@@ -7,6 +7,9 @@ eureka:
 ui:
   serverUrl: http://localhost:4200/
 zuul:
+  ribbon:
+    eager-load:
+      enabled: true
   routes:
     prefix: 
     customersApi:
