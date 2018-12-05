@@ -15,16 +15,29 @@ zuul:
     customersApi:
       path: /customersApi/**
       serviceId: CUSTOMER-SERVICE
+      stripPrefix: false
     itemsApi:
       path: /itemsApi/**
       serviceId: ITEM-SERVICE
+      stripPrefix: false
     salesApi:
       path: /salesApi/**
       serviceId: SALESORDER-SERVICE
+      stripPrefix: false
 customersApi:
   ribbon:
-#    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-#    listOfServers: http://inpuhjpc04128:9090,http://inpuhjpc04133:8080
+    ConnectTimeout: 10000
+    ReadTimeout: 30000
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100
+itemsApi:
+  ribbon:
+    ConnectTimeout: 10000
+    ReadTimeout: 30000
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100
+salesApi:
+  ribbon:
     ConnectTimeout: 10000
     ReadTimeout: 30000
     MaxTotalHttpConnections: 500
