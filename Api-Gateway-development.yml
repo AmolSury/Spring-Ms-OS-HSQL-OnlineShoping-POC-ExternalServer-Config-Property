@@ -7,24 +7,34 @@ eureka:
 ui:
   serverUrl: http://localhost:4200/
 zuul:
-  prefix: 
   routes:
     customersApi:
+      path: /customersApi/**
       serviceId: CUSTOMER-SERVICE
     itemsApi:
+      path: /itemsApi/**
       serviceId: ITEM-SERVICE
     salesApi:
+      path: /salesApi/**
       serviceId: SALESORDER-SERVICE
 # Increase the Hystrix timeout to 60s (for all)
 hystrix:
   command:
-    default:
+    customersApi:
       execution:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
-        timeout:
-          enable: false
+    itemsApi:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+    salesApi:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
 # Disable Hystrix timeout globally (for all services)
 #hystrix.command.default.execution.timeout.enabled: false
 
