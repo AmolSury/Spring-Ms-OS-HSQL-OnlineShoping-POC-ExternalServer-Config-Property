@@ -20,18 +20,21 @@ zuul:
       serviceId: SALESORDER-SERVICE
 customersApi:
   ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
     ConnectTimeout: 10000
     ReadTimeout: 30000
     MaxTotalHttpConnections: 500
     MaxConnectionsPerHost: 100
 itemsApi:
   ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
     ConnectTimeout: 10000
     ReadTimeout: 30000
     MaxTotalHttpConnections: 500
     MaxConnectionsPerHost: 100
 salesApi:
   ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
     ConnectTimeout: 10000
     ReadTimeout: 30000
     MaxTotalHttpConnections: 500
