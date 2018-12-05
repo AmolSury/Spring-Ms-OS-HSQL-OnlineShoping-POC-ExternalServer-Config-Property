@@ -17,6 +17,9 @@ zuul:
     salesApi:
       path: /salesApi/**
       serviceId: SALESORDER-SERVICE
+ribbon:
+  readTimeOut: 60000
+  connectionTimeOut: 60000
 # Increase the Hystrix timeout to 60s (for all)
 hystrix:
   command:
