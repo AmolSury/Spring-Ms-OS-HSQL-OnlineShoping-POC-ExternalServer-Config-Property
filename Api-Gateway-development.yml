@@ -15,15 +15,12 @@ zuul:
     customersApi:
       path: /customersApi/**
       serviceId: CUSTOMER-SERVICE
-      stripPrefix: false
     itemsApi:
       path: /itemsApi/**
       serviceId: ITEM-SERVICE
-      stripPrefix: false
     salesApi:
       path: /salesApi/**
       serviceId: SALESORDER-SERVICE
-      stripPrefix: false
 customersApi:
   ribbon:
     ConnectTimeout: 10000
