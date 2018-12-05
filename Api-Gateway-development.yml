@@ -19,8 +19,8 @@ zuul:
       serviceId: SALESORDER-SERVICE
 customersApi:
   ribbon:
-    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    listOfServers: http://inpuhjpc04128:9090,http://inpuhjpc04133:8080
+#    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+#    listOfServers: http://inpuhjpc04128:9090,http://inpuhjpc04133:8080
     ConnectTimeout: 10000
     ReadTimeout: 30000
     MaxTotalHttpConnections: 500
