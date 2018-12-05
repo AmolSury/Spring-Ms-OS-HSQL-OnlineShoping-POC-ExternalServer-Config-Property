@@ -20,6 +20,11 @@ zuul:
 # Increase the Hystrix timeout to 60s (for all)
 hystrix:
   command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
     customersApi:
       execution:
         isolation:
