@@ -12,6 +12,21 @@ management:
     web:
       exposure:
         include: '*'
+  endpoint:
+    chaosmonkey:
+      enabled: true
+    chaosmonkeyjmx:
+      enabled: true
 spring:
   jmx:
     default-domain: Item-Service
+
+chaos:
+  monkey:
+    enabled: true
+    watcher:
+      component: false
+      controller: false
+      repository: false
+      rest-controller: true
+      service: true
