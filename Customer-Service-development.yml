@@ -8,6 +8,11 @@ eureka:
 ui:
   serverUrl: http://localhost:4200/
 management:
+  endpoint:
+    chaosmonkey:
+      enabled: true
+    chaosmonkeyjmx:
+      enabled: true
   endpoints:
     web:
       exposure:
@@ -15,3 +20,16 @@ management:
 spring:
   jmx:
     default-domain: Customer-Service
+chaos:
+  monkey:
+    enabled: true
+    assaults:
+      latency-active: true
+      latency-range-start: 1000
+      latency-range-end: 4500
+      level: 1
+    watcher:
+      controller: true
+      restController: true
+      service: true
+      repository: true
