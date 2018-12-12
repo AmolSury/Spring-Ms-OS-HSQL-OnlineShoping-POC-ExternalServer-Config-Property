@@ -30,7 +30,7 @@ chaos:
       latency-range-end: 4500
       level: 1
     watcher:
-      controller: true
-      restController: true
+      controller: false
+      restController: false
       service: false
       repository: false
