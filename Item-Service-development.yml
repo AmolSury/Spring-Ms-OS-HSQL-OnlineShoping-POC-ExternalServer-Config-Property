@@ -31,6 +31,6 @@ chaos:
       level: 1
     watcher:
       controller: false
-      restController: false
-      service: false
+      restController: true
+      service: true
       repository: false
