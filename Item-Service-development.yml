@@ -33,4 +33,4 @@ chaos:
       controller: true
       restController: true
       service: false
-      repository: true
+      repository: false
