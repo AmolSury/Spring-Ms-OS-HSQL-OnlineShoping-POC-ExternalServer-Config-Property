@@ -32,5 +32,5 @@ chaos:
     watcher:
       controller: true
       restController: true
-      service: true
+      service: false
       repository: true
