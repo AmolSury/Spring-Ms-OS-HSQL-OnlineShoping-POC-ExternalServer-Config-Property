@@ -10,6 +10,9 @@ spring:
     port: 25
   jmx:
     default-domain: SalesOrder-Service
+  jpa:
+    hibernate:
+      ddl-auto: none
 eureka:
   client:
     serviceUrl:

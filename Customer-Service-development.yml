@@ -20,6 +20,9 @@ management:
 spring:
   jmx:
     default-domain: Customer-Service
+  jpa:
+    hibernate:
+      ddl-auto: none
 chaos:
   monkey:
     enabled: true
