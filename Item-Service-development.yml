@@ -17,11 +17,6 @@ management:
     web:
       exposure:
         include: '*'
-  metrics:
-    enable: true
-    tags:
-      region: us-east-1
-      stack: dev
 spring:
   jmx:
     default-domain: Item-Service
