@@ -32,9 +32,9 @@ management:
         include: '*'
 chaos:
   monkey:
-    enabled: true
+    enabled: false
     assaults:
-      latency-active: true
+      latency-active: false
       latency-range-start: 1000
       latency-range-end: 4500
       level: 1
